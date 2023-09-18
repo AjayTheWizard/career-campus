@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+// @ts-ignore
 import { useLocalStorage, useToggle, useClickAway } from "@uidotdev/usehooks";
 import { chatBotHandler } from "./server/chatbot";
 
