@@ -5,7 +5,7 @@ import { useState } from "react";
 // @ts-ignore
 import { useLocalStorage as uls, useToggle, useClickAway } from "@uidotdev/usehooks";
 
-import { chatBotHandler } from "./server/chatbot";
+import { chatBotHandler } from "./actions/chatbot";
 
 type UseLocalStorage = <T>(key: string, initialValue?: T | undefined) => [T, React.Dispatch<React.SetStateAction<T>>]
 const useLocalStorage = uls as UseLocalStorage
