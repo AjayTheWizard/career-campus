@@ -1,9 +1,15 @@
 "use client";
 
 import { useState } from "react";
+
 // @ts-ignore
-import { useLocalStorage, useToggle, useClickAway } from "@uidotdev/usehooks";
+import { useLocalStorage as uls, useToggle, useClickAway } from "@uidotdev/usehooks";
+
 import { chatBotHandler } from "./server/chatbot";
+
+type UseLocalStorage = <T>(key: string, initialValue?: T | undefined) => [T, React.Dispatch<React.SetStateAction<T>>]
+const useLocalStorage = uls as UseLocalStorage
+
 
 interface Chat {
   question: string;
